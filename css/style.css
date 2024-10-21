@@ -1,0 +1,208 @@
+:root {
+   --main-color: #e65f78;
+}
+
+.text-main {
+   color: var(--main-color) !important;
+}
+
+.bg-main {
+   background-color: var(--main-color) !important;
+}
+
+.shrink-parag {
+   max-width: 500px;
+}
+
+html {
+   scroll-padding-top: 3rem;
+}
+
+body {
+   font-family: "Nunito Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Montserrat", sans-serif;
+}
+
+header {
+   background-image: url(../images/header-bg.jpg);
+   background-position: center;
+   background-size: cover;
+   background-color: rgba(0, 0, 0, 0.7);
+   background-blend-mode: multiply;
+}
+
+nav .active {
+   color: var(--main-color) !important;
+   font-weight: 700 !important;
+}
+
+header h1 {
+   font-size: 65px;
+}
+
+header .btn-download {
+   border: 1px solid #fff;
+   color: #fff;
+   background-color: transparent;
+}
+
+header .btn-download:hover {
+   color: black;
+   background-color: #fff;
+}
+
+#about .about-icons>div {
+   width: 40px;
+   height: 40px;
+   border: 2px solid #ccc;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+#about .about-icons >div:hover{
+   color: var(--main-color);
+   border-color: var(--main-color);
+}
+
+#clients .carousel-indicators {
+   position: static;
+   margin: 0;
+}
+
+#clients .carousel-indicators>button {
+   background-color: var(--main-color);
+   height: 12px;
+   width: 12px;
+   margin: 0px 8px;
+   border-radius: 50%;
+}
+
+#portfolio .nav-item button {
+   color: black;
+}
+
+#portfolio .nav-item button.active {
+   background-color: var(--main-color) !important;
+   color: white;
+   border-radius: 20px;
+}
+
+#portfolio .portfolio-image {
+   position: relative;
+   overflow: hidden;
+}
+
+#portfolio .portfolio-overlay {
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.6);
+   width: 100%;
+   height: 100%;
+   top: 0;
+   opacity: 0;
+   transition: all 0.3s;
+}
+
+#portfolio .overlay-text {
+   color: white;
+   text-align: center;
+   top: 100%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   transition: all 0.3s;
+}
+
+#portfolio .portfolio-image img {
+   transition: all 0.3s;
+}
+
+#portfolio .portfolio-image:hover .portfolio-overlay {
+   opacity: 1;
+}
+
+#portfolio .portfolio-image:hover .overlay-text {
+   top: 50%;
+}
+
+#portfolio .portfolio-image:hover img {
+   transform: scale(1.4);
+}
+
+#contact .form-control:focus {
+   border-color: var(--main-color) !important;
+   box-shadow: 0 0 0 4px #e65f7838;
+}
+
+.spinner {
+   position: fixed;
+   background-color: #333;
+   color: white;
+   top: 25%;
+   left: 0;
+   width: 40px;
+   height: 40px;
+   border-radius: 0 5px 5px 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.animation {
+   position: absolute;
+   border: 2px solid #fff;
+   border-radius: 20px;
+   width: 40px;
+   height: 70px;
+   bottom: 50px;
+   left: 50%;
+   transform: translate(-50%);
+   animation-name: bouncing;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+
+.animation .animation-child {
+   position: absolute;
+   height: 10px;
+   width: 5px;
+   background-color: white;
+   left: 50%;
+   bottom: 15px;
+   transform: translateX(-50%);
+}
+
+@keyframes bouncing {
+   0% {
+      bottom: 100px;
+   }
+
+   25% {
+      bottom: 50px;
+   }
+
+   50% {
+      bottom: 80px;
+   }
+
+   75% {
+      bottom: 50px;
+   }
+
+   100% {
+      bottom: 60px;
+
+   }
+}
